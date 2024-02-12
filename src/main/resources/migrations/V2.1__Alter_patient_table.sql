@@ -1,0 +1,1 @@
+alter table if exists patients alter column birthdate type date;

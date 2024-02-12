@@ -2,8 +2,8 @@ package com.example.testprojectforktelabs.services;
 
 import com.example.gs_ws.TalonRequest;
 import com.example.gs_ws.TalonResponse;
-import com.example.testprojectforktelabs.Exceptions.DuplicateTalonException;
-import com.example.testprojectforktelabs.Exceptions.NotFoundEntityException;
+import com.example.testprojectforktelabs.exceptions.DuplicateTalonException;
+import com.example.testprojectforktelabs.exceptions.NotFoundEntityException;
 import com.example.testprojectforktelabs.utils.MappingTalonUtils;
 import com.example.testprojectforktelabs.enitities.DoctorEntity;
 import com.example.testprojectforktelabs.enitities.TalonEntity;

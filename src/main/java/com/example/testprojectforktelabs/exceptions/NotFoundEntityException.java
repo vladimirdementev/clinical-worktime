@@ -1,4 +1,4 @@
-package com.example.testprojectforktelabs.Exceptions;
+package com.example.testprojectforktelabs.exceptions;
 
 public class NotFoundEntityException extends RuntimeException{
 
