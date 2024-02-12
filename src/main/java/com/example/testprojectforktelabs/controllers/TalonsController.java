@@ -1,8 +1,6 @@
 package com.example.testprojectforktelabs.controllers;
 
-import com.example.testprojectforktelabs.enitities.TalonEntity;
-import com.example.testprojectforktelabs.services.DoctorService;
-import com.example.testprojectforktelabs.services.PatientsService;
+import com.example.testprojectforktelabs.entities.TalonEntity;
 import com.example.testprojectforktelabs.services.TalonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

@@ -5,8 +5,8 @@ import com.example.gs_ws.TalonResponse;
 import com.example.testprojectforktelabs.exceptions.DuplicateTalonException;
 import com.example.testprojectforktelabs.exceptions.NotFoundEntityException;
 import com.example.testprojectforktelabs.utils.MappingTalonUtils;
-import com.example.testprojectforktelabs.enitities.DoctorEntity;
-import com.example.testprojectforktelabs.enitities.TalonEntity;
+import com.example.testprojectforktelabs.entities.DoctorEntity;
+import com.example.testprojectforktelabs.entities.TalonEntity;
 import com.example.testprojectforktelabs.repository.TalonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,6 +15,7 @@ import javax.xml.datatype.DatatypeConfigurationException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class TalonServiceImpl implements TalonService {
@@ -37,23 +38,30 @@ public class TalonServiceImpl implements TalonService {
             throw new NotFoundEntityException("Список докторов пуст. Для создания расписания должен присутствовать хотя бы один доктор.");
         }
         List<TalonResponse> result = new ArrayList<>();
-        /*для каждого доктора формируем заданное кол-во слотов*/
         for (DoctorEntity doctor : doctors) {
-            for (int i = 0; i < talon.getQuantity().intValue(); i++) {
-                TalonEntity createdTalon = MappingTalonUtils.mapTalonRequestToTalonEntity(talon);
-                /*модифицируем время начала талона и привязываем доктора*/
-                createdTalon.setStartTime(createdTalon.getStartTime().plus(createdTalon.getDuration().multipliedBy(i)));
-                createdTalon.setDoctor(doctor);
-                /*Если существует талон к текущему врачу на заданное время или в промежутке заданного времени выкидываем ошибку*/
-                if (talonRepository.findByDateAndStartTimeAndDoctorId(createdTalon.getDate(), createdTalon.getStartTime(), createdTalon.getDoctor().getId()).isPresent()) {
-                    throw new DuplicateTalonException("Талон на " + createdTalon.getDate().toString() + " к " + doctor.getFullName() + " в " + createdTalon.getStartTime().toString() + " уже существует.");
-                }
-                talonRepository.save(createdTalon);
-                result.add(MappingTalonUtils.mapTalonEntityToTalonResponse(createdTalon));
-
-            }
+            createAndSaveTalonsForDoctor(talon, doctor, result);
         }
         return result;
+    }
+
+    private void createAndSaveTalonsForDoctor(TalonRequest talon, DoctorEntity doctor, List<TalonResponse> result) throws DatatypeConfigurationException {
+        for (int i = 0; i < talon.getQuantity().intValue(); i++) {
+            TalonEntity createdTalon = MappingTalonUtils.mapTalonRequestToTalonEntity(talon);
+            createdTalon.setStartTime(createdTalon.getStartTime().plus(createdTalon.getDuration().multipliedBy(i)));
+            createdTalon.setDoctor(doctor);
+            checkForDuplicateTalon(createdTalon);
+            talonRepository.save(createdTalon);
+            result.add(MappingTalonUtils.mapTalonEntityToTalonResponse(createdTalon));
+        }
+    }
+
+    private void checkForDuplicateTalon(TalonEntity createdTalon) {
+        Optional<TalonEntity> existingTalon = talonRepository.findByDateAndStartTimeAndDoctorId(
+                createdTalon.getDate(), createdTalon.getStartTime(), createdTalon.getDoctor().getId());
+        if (existingTalon.isPresent()) {
+            throw new DuplicateTalonException("Талон на " + createdTalon.getDate() + " к " +
+                    createdTalon.getDoctor().getFullName() + " в " + createdTalon.getStartTime() + " уже существует.");
+        }
     }
 
     @Override

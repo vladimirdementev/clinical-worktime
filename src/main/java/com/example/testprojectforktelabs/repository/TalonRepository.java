@@ -1,6 +1,6 @@
 package com.example.testprojectforktelabs.repository;
 
-import com.example.testprojectforktelabs.enitities.TalonEntity;
+import com.example.testprojectforktelabs.entities.TalonEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,6 +1,6 @@
 package com.example.testprojectforktelabs.repository;
 
-import com.example.testprojectforktelabs.enitities.PatientEntity;
+import com.example.testprojectforktelabs.entities.PatientEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

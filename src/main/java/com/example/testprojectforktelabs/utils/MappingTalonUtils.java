@@ -2,7 +2,7 @@ package com.example.testprojectforktelabs.utils;
 
 import com.example.gs_ws.TalonRequest;
 import com.example.gs_ws.TalonResponse;
-import com.example.testprojectforktelabs.enitities.TalonEntity;
+import com.example.testprojectforktelabs.entities.TalonEntity;
 import org.springframework.stereotype.Service;
 
 import javax.xml.datatype.DatatypeConfigurationException;

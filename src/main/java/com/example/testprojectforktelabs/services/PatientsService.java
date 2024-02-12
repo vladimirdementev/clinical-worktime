@@ -1,6 +1,6 @@
 package com.example.testprojectforktelabs.services;
 
-import com.example.testprojectforktelabs.enitities.PatientEntity;
+import com.example.testprojectforktelabs.entities.PatientEntity;
 import org.springframework.stereotype.Service;
 
 @Service

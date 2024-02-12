@@ -1,4 +1,4 @@
-package com.example.testprojectforktelabs.enitities;
+package com.example.testprojectforktelabs.entities;
 
 import jakarta.annotation.Nullable;
 import jakarta.persistence.*;

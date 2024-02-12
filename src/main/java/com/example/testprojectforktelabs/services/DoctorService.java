@@ -1,6 +1,6 @@
 package com.example.testprojectforktelabs.services;
 
-import com.example.testprojectforktelabs.enitities.DoctorEntity;
+import com.example.testprojectforktelabs.entities.DoctorEntity;
 
 import java.util.List;
 

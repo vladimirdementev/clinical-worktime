@@ -1,6 +1,6 @@
 package com.example.testprojectforktelabs.services;
 
-import com.example.testprojectforktelabs.enitities.PatientEntity;
+import com.example.testprojectforktelabs.entities.PatientEntity;
 import com.example.testprojectforktelabs.repository.PatientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

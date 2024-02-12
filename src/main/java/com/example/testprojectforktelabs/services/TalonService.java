@@ -2,7 +2,7 @@ package com.example.testprojectforktelabs.services;
 
 import com.example.gs_ws.TalonRequest;
 import com.example.gs_ws.TalonResponse;
-import com.example.testprojectforktelabs.enitities.TalonEntity;
+import com.example.testprojectforktelabs.entities.TalonEntity;
 
 import javax.xml.datatype.DatatypeConfigurationException;
 import java.time.LocalDate;
