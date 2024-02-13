@@ -1,13 +1,13 @@
-package com.example.testprojectforktelabs;
+package com.example.clinical_worktime;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TestProjectForKteLabsApplication {
+public class ClinicalWorktimeApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(TestProjectForKteLabsApplication.class, args);
+        SpringApplication.run(ClinicalWorktimeApplication.class, args);
     }
 
 }

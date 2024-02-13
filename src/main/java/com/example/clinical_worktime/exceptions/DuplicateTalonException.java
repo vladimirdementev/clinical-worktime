@@ -1,4 +1,4 @@
-package com.example.testprojectforktelabs.exceptions;
+package com.example.clinical_worktime.exceptions;
 
 public class DuplicateTalonException extends RuntimeException{
 

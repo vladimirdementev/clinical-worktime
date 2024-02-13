@@ -1,6 +1,6 @@
-package com.example.testprojectforktelabs.repository;
+package com.example.clinical_worktime.repository;
 
-import com.example.testprojectforktelabs.entities.TalonEntity;
+import com.example.clinical_worktime.entities.TalonEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

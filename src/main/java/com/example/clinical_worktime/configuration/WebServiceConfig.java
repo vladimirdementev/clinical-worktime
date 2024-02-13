@@ -1,6 +1,6 @@
-package com.example.testprojectforktelabs.configuration;
+package com.example.clinical_worktime.configuration;
 
-import com.example.testprojectforktelabs.endpoint.TalonEndPoint;
+import com.example.clinical_worktime.endpoint.TalonEndPoint;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;

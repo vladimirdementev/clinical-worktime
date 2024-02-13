@@ -1,6 +1,6 @@
-package com.example.testprojectforktelabs.services;
+package com.example.clinical_worktime.services;
 
-import com.example.testprojectforktelabs.entities.DoctorEntity;
+import com.example.clinical_worktime.entities.DoctorEntity;
 
 import java.util.List;
 

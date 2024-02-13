@@ -1,7 +1,7 @@
-package com.example.testprojectforktelabs.endpoint;
+package com.example.clinical_worktime.endpoint;
 
 import com.example.gs_ws.*;
-import com.example.testprojectforktelabs.services.TalonService;
+import com.example.clinical_worktime.services.TalonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;

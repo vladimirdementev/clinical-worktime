@@ -1,7 +1,7 @@
-package com.example.testprojectforktelabs.services;
+package com.example.clinical_worktime.services;
 
-import com.example.testprojectforktelabs.entities.PatientEntity;
-import com.example.testprojectforktelabs.repository.PatientRepository;
+import com.example.clinical_worktime.entities.PatientEntity;
+import com.example.clinical_worktime.repository.PatientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

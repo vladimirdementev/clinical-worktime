@@ -1,8 +1,8 @@
-package com.example.testprojectforktelabs.utils;
+package com.example.clinical_worktime.utils;
 
 import com.example.gs_ws.TalonRequest;
 import com.example.gs_ws.TalonResponse;
-import com.example.testprojectforktelabs.entities.TalonEntity;
+import com.example.clinical_worktime.entities.TalonEntity;
 import org.springframework.stereotype.Service;
 
 import javax.xml.datatype.DatatypeConfigurationException;

@@ -1,13 +1,13 @@
-package com.example.testprojectforktelabs.services;
+package com.example.clinical_worktime.services;
 
 import com.example.gs_ws.TalonRequest;
 import com.example.gs_ws.TalonResponse;
-import com.example.testprojectforktelabs.exceptions.DuplicateTalonException;
-import com.example.testprojectforktelabs.exceptions.NotFoundEntityException;
-import com.example.testprojectforktelabs.utils.MappingTalonUtils;
-import com.example.testprojectforktelabs.entities.DoctorEntity;
-import com.example.testprojectforktelabs.entities.TalonEntity;
-import com.example.testprojectforktelabs.repository.TalonRepository;
+import com.example.clinical_worktime.exceptions.DuplicateTalonException;
+import com.example.clinical_worktime.exceptions.NotFoundEntityException;
+import com.example.clinical_worktime.utils.MappingTalonUtils;
+import com.example.clinical_worktime.entities.DoctorEntity;
+import com.example.clinical_worktime.entities.TalonEntity;
+import com.example.clinical_worktime.repository.TalonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

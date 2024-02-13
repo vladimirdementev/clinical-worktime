@@ -1,6 +1,6 @@
-package com.example.testprojectforktelabs.repository;
+package com.example.clinical_worktime.repository;
 
-import com.example.testprojectforktelabs.entities.DoctorEntity;
+import com.example.clinical_worktime.entities.DoctorEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

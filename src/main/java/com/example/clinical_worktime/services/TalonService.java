@@ -1,8 +1,8 @@
-package com.example.testprojectforktelabs.services;
+package com.example.clinical_worktime.services;
 
 import com.example.gs_ws.TalonRequest;
 import com.example.gs_ws.TalonResponse;
-import com.example.testprojectforktelabs.entities.TalonEntity;
+import com.example.clinical_worktime.entities.TalonEntity;
 
 import javax.xml.datatype.DatatypeConfigurationException;
 import java.time.LocalDate;

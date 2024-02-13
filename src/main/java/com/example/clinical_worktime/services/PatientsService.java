@@ -1,6 +1,6 @@
-package com.example.testprojectforktelabs.services;
+package com.example.clinical_worktime.services;
 
-import com.example.testprojectforktelabs.entities.PatientEntity;
+import com.example.clinical_worktime.entities.PatientEntity;
 import org.springframework.stereotype.Service;
 
 @Service

@@ -1,4 +1,4 @@
-package com.example.testprojectforktelabs.entities;
+package com.example.clinical_worktime.entities;
 
 
 import jakarta.persistence.*;

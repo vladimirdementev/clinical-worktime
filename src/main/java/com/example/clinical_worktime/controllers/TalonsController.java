@@ -1,7 +1,7 @@
-package com.example.testprojectforktelabs.controllers;
+package com.example.clinical_worktime.controllers;
 
-import com.example.testprojectforktelabs.entities.TalonEntity;
-import com.example.testprojectforktelabs.services.TalonService;
+import com.example.clinical_worktime.entities.TalonEntity;
+import com.example.clinical_worktime.services.TalonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
